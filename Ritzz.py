@@ -7,6 +7,7 @@ import wikipedia
 from wikipedia.wikipedia import search
 import webbrowser as wb
 import cv2
+import webbrowser
 # pyttsx3 is for Text to speech
 
 engine = pyttsx3.init()
@@ -82,12 +83,13 @@ def takecommand():
 
 def screenshot():
     img = pyautogui.screenshot()
-    img.save("D:\screenshots\ss.png")
+    path = os.getcwd()
+    img.save(f"{path}\ss.png")
 
 if __name__ == "__main__":
 
     wishme()
-
+    # 
     while True:
         query = takecommand().lower()
         print(query)
@@ -120,16 +122,7 @@ if __name__ == "__main__":
         elif "mute" in query:
             pyautogui.press('volumemute')
         
-        elif "open camera" in query:
-            cam = cv2.VideoCapture(0)
-            while True:
-                ret, img = cam.read()
-                cv2.imshow('webcam', img)
-                k = cv2.waitkey(50)
-                if k==27:
-                    break;
-                cam.release()
-                cv2.destroyAllWindows()
+
 
         #for Screenshot
         elif "screenshot" in query:
@@ -154,13 +147,15 @@ if __name__ == "__main__":
             query = query.replace("who is", "")
             result = wikipedia.summary(query, sentences = 2)
             speak(result)
+            
         #Google Chrome Search
-        #not  working need to fix raw string/chromepath 
         elif "search on google" in query:
             speak("what should i search?")
             chromepath = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %s"
+            base_url = "http://www.google.com/search?q="
             search = takecommand().lower()
-            wb.get(chromepath).open_new_tab(search+ " .com")
+            # wb.get(chromepath).open_new_tab(search+ " .com")
+            webbrowser.open_new(base_url+search)
         
         #Playing Songs
         elif "play song" in query:
@@ -173,3 +168,15 @@ if __name__ == "__main__":
             speak("Good Bye Sir!, Have a Nice day")
             quit()
         
+
+
+# elif "open camera" in query:
+#     cam = cv2.VideoCapture(0)
+#     while True:
+#         ret, img = cam.read()
+#         cv2.imshow('webcam', img)
+#         k = cv2.waitKey(5000)
+#         if k==27:
+#             break
+#         cam.release()
+#         cv2.destroyAllWindows()
