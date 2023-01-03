@@ -7,9 +7,9 @@ A Desktop Assistant Made in Python to do various tasks
 
 ## Table of Contents
 * [General Info](#general-information)
-* [Features](#Features)
+* [Features](#features)
 * [Demo](#demo)
-* [Authors](#Authors)
+* [Authors](#authors)
 * [Feedback](#feedback)
 ## General Information
 - A Desktop Assistant Made in Python to do various tasks
@@ -30,7 +30,7 @@ A Desktop Assistant Made in Python to do various tasks
 ## Demo
 
 <a href="https://youtu.be/S399tOZVFsM?t=29" target="_blank">
- <img src="http://img.youtube.com/vi/S399tOZVFsM/maxres2.jpg" alt="Watch the video" width="1280" height="550" border="0" />
+ <img src="http://img.youtube.com/vi/S399tOZVFsM/maxres2.jpg" alt="Watch the video" width="100%" height="100%" border="0" />
 </a>
 
 
