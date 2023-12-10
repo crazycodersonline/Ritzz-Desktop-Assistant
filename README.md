@@ -37,8 +37,8 @@ A Desktop Assistant Made in Python to do various tasks
 
 ## Authors
 
-- [@riteshsah](https://https://github.com/riteshsah)
-- [@nitinmadas](https://https://github.com/riteshsah)
+- [@riteshsah](https://github.com/riteshsah)
+- [@nitinmadas](https://github.com/nitinmadas)
 
 
 ## Feedback
